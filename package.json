@@ -1,0 +1,17 @@
+{
+  "name": "loot_council",
+  "version": "1.0.0",
+  "description": "playing with WoW apis",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.15.3",
+    "request": "^2.81.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Neil Larson",
+  "license": "ISC"
+}

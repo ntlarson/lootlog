@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Intent Loot Council</title>
+
+  <script type="text/javascript" src="//wow.zamimg.com/widgets/power.js"></script><script>var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks": true }</script>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css">
+  <link rel="stylesheet" href="lootcouncil.css">
+
+  <!--[if lt IE 9]>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+  <header>
+      Intent Loot Logs
+  </header>
+  <div id="lootContent">
+      <section id="lootForm" class="left">
+          <form class="dark-matter">
+              <h1>Log Raid Drops</h1>
+
+              <label>
+                  <span>Awarded To :</span>
+                  <input id="charName" type="text" />
+              </label>
+
+              <label>
+                  <span>Item ID :</span>
+                  <input id="itemId" type="text" />
+              </label>
+
+              <label>
+                  <span>Item Modifier :</span>
+                  <select class="modifiers">
+                      <option value="">Select</option>
+                      <option value="40">avoidance</option>
+                      <option value="41">leach</option>
+                      <option value="42">speed</option>
+                  </select>
+              </label>
+              <input type="checkbox" id="socket" data-socketBonusId="1808">
+              <div id="socketLabel">has socket</div>
+
+              <label>
+                  <span>&nbsp;</span>
+                  <input type="button" class="button" value="Log Item" />
+              </label>
+          </form>
+      </section>
+      <section id="lootList" class="left">
+          <table id="lootTable" class="stripe display compact">
+              <thead>
+                  <tr>
+                      <th>Date Awarded</th>
+                      <th>Awarded To</th>
+                      <th>Item</th>
+                  </tr>
+              </thead>
+              <tbody>
+              </tbody>
+          </table>
+      </section>
+  <!--     <a href="http://www.wowhead.com/item=141533" rel="bonus=1477:1808" class="q4"></a> -->
+  </div>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+  <script src="lootcouncil.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+<!-- Add to page header <script type="text/javascript" src="//wow.zamimg.com/widgets/power.js"></script><script>var wowhead_tooltips = { "colorlinks": true, "iconizelinks": true, "renamelinks": true }</script> -->
