@@ -1,7 +1,8 @@
 let express = require('express');
 let request = require('request');
 let app = express();
-let port = 3000
+
+app.set('port', (process.env.PORT || 3000));
 
 let dummyAwards = [
   {
@@ -67,7 +68,6 @@ app.get('/item/awards', function (req, res) {
           awards.push(thisAward);
           awardsCount -= 1;
           if (awardsCount === 0) {
-            console.log('final awards', awards);
             res.send({awards:awards})
           }
         }
@@ -89,4 +89,6 @@ app.get('/item/:id', function (req, res) {
     });
 });
 
-app.listen(port);
+app.listen(app.get('port'), function() {
+  console.log('Node app is running on port', app.get('port'));
+});
